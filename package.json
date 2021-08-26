@@ -9,7 +9,8 @@
   "type": "module",
   "scripts": {
     "dev": "nodemon index.js",
-    "start": "node ."
+    "start": "node .",
+    "test": "jest --watchAll"
   },
   "dependencies": {
     "cors": "^2.8.5",
@@ -18,5 +19,9 @@
     "firebase": "^9.0.0",
     "nodemon": "^2.0.12",
     "shortid": "^2.2.16"
+  },
+  "devDependencies": {
+    "jest": "^27.0.6",
+    "supertest": "^6.1.6"
   }
 }
