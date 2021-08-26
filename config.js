@@ -1,8 +1,8 @@
-import dotenv from 'dotenv'
-
+import dotenv from "dotenv"
 dotenv.config()
 
 const { API_KEY, AUTH_DOMAIN, PROJECT_ID, STORAGE_BUCKET, MESSAGING_SENDER_ID, APP_ID, MEASUREMENT_ID } = process.env
+
 
 
 export const firebaseConfig = {
