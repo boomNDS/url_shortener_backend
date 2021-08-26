@@ -14,6 +14,7 @@ const checkDataIsExists = async shortID => {
 export const createShortUrl = async (req, res) => {
     try {
         const url = req.body.url
+        const base_url = "https://tonic-url-shortener-node.herokuapp.com/"
         if (validURL(url)) {
             const db = getDatabase();
             let randomID = shortid.generate()
@@ -23,7 +24,7 @@ export const createShortUrl = async (req, res) => {
             set(ref(db, 'url/' + randomID), {
                 url: url
             });
-            res.status(200).json({ url: url })
+            res.status(200).json({ url: base_url + randomID })
         } else {
             res.status(400).send("invalid url")
         }
